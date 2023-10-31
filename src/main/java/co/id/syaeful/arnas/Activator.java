@@ -14,7 +14,7 @@ public class Activator implements BundleActivator {
         registrationList = new ArrayList<ServiceRegistration>();
 
         //Register plugin here
-//        registrationList.add(context.registerService(JasperTest.class.getName(), new JasperTest(), null));
+        registrationList.add(context.registerService(GenerateTransactionId.class.getName(), new GenerateTransactionId(), null));
     }
 
     public void stop(BundleContext context) {
