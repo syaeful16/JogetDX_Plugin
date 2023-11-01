@@ -5,6 +5,7 @@
 package co.id.syaeful.arnas;
 
 import co.id.syaeful.arnas.dao.GenerateTransactionIdDao;
+import co.id.syaeful.arnas.function.GenerateTransactionIdFunction;
 import java.util.Map;
 import org.joget.apps.app.service.AppService;
 import org.joget.apps.app.service.AppUtil;
@@ -33,10 +34,14 @@ public class GenerateTransactionId extends DefaultApplicationPlugin{
         String appVersion = appService.getPublishedVersion(appId).toString();
         
         //call object
-        GenerateTransactionIdDao dao = new GenerateTransactionIdDao();
+//        GenerateTransactionIdDao dao = new GenerateTransactionIdDao();
+        GenerateTransactionIdFunction func = new GenerateTransactionIdFunction();
         
-        String resultDao = dao.getDataVar(appId, "counter_transaction_id_current_year", appVersion);
-        LogUtil.info(this.getClassName(), resultDao);
+        if (func.GenerateTransactionId(recordId, appId, appVersion)) {
+            LogUtil.info(this.getClassName(), "Success Generate Transaction ID, record ID : " + recordId);
+        } else {
+            LogUtil.info(this.getClassName(), "Failed Generate Transaction ID, record ID : " + recordId);
+        }
         
         return null;
     }

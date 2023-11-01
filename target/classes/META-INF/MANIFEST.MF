@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1698722970516
+Bnd-LastModified: 1698725418983
 Build-Jdk-Spec: 11
 Bundle-Activator: co.id.syaeful.arnas.Activator
 Bundle-ManifestVersion: 2
