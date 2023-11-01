@@ -15,6 +15,7 @@ public class Activator implements BundleActivator {
 
         //Register plugin here
         registrationList.add(context.registerService(GenerateTransactionId.class.getName(), new GenerateTransactionId(), null));
+        registrationList.add(context.registerService(GenerateQrLink.class.getName(), new GenerateQrLink(), null));
     }
 
     public void stop(BundleContext context) {

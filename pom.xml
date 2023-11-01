@@ -79,7 +79,12 @@
             <scope>provided</scope>
         </dependency>
         <!-- Change plugin specific dependencies here -->
-   
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>7.0</version>
+            <type>jar</type>
+        </dependency>
         <!-- End change plugin specific dependencies here -->
     </dependencies>
     <distributionManagement>
