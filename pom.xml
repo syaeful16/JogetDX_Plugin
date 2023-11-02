@@ -85,6 +85,17 @@
             <version>7.0</version>
             <type>jar</type>
         </dependency>
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>core</artifactId>
+            <version>3.5.2</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>javase</artifactId>
+            <version>3.3.2</version>
+        </dependency>
         <!-- End change plugin specific dependencies here -->
     </dependencies>
     <distributionManagement>
